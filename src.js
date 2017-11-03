@@ -1,7 +1,6 @@
 
 var q = {
   nodeList:[],
-
   constructor(selector){
     var retVal;
     try {
@@ -13,17 +12,27 @@ var q = {
       return this;
     }
   },
-
   css(property, value) {
     for (var i = 0; i < this.nodeList.length; i++) {
       this.nodeList[i].style[property] = value;
     }
     return this;
   },
-
   html(value) {
     for (var i = 0; i < this.nodeList.length; i++) {
       this.nodeList[i].innerHTML = value;
+    }
+    return this;
+  },
+  on(event, callback){
+    for (var i = 0; i < this.nodeList.length; i++) {
+      this.nodeList[i].addEventListener(event, callback)
+    }
+    return this;
+  },
+  attribute(property,value){
+    for (var i = 0; i < this.nodeList.length; i++) {
+      this.nodeList[i][property] = value;
     }
     return this;
   }
