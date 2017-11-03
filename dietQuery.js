@@ -1,22 +1,22 @@
 //
-// liteQuery Private Functions
+// dietQuery Private Functions
 // ===================================================================
-var httpLoad = function (url, liteQueryInstance) {
+var httpLoad = function (url, dietQueryInstance) {
   // Credit to Joan and Félix Gagnon-Grenier on StackOverflow at question answer:
   // https://stackoverflow.com/a/4033310
   var xmlHttp = new XMLHttpRequest()
   xmlHttp.onreadystatechange = function () {
     if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
-      liteQueryInstance.html(xmlHttp.responseText)
+      dietQueryInstance.html(xmlHttp.responseText)
     }
   }
   xmlHttp.open('GET', url, true)
   xmlHttp.send(null)
 }
 
-// liteQuery Public Functions
+// dietQuery Public Functions
 // ===================================================================
-var q = {
+var dQ = {
   nodeList: [],
   constructor: function (selector) {
     var retVal
@@ -59,8 +59,8 @@ var q = {
   }
 }
 
-// liteQuery Interface
+// dietQuery Interface
 // ===================================================================
 function _$ (selector) { // eslint-disable-line no-unused-vars
-  return q.constructor(selector)
+  return dQ.constructor(selector)
 }

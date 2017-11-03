@@ -1,5 +1,5 @@
 {
-  "name": "litequery",
+  "name": "dietQuery",
   "version": "1.0.0",
   "description": "",
   "main": "src.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jonathanmcdaniel/liteQuery.git"
+    "url": "git+https://github.com/jonathanmcdaniel/dietQuery.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jonathanmcdaniel/liteQuery/issues"
+    "url": "https://github.com/jonathanmcdaniel/dietQuery/issues"
   },
-  "homepage": "https://github.com/jonathanmcdaniel/liteQuery#readme",
+  "homepage": "https://github.com/jonathanmcdaniel/dietQuery#readme",
   "devDependencies": {
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.8.0",

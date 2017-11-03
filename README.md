@@ -1,1 +1,1 @@
-# lite
+# dietQuery
