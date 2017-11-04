@@ -1,7 +1,7 @@
 //
 // dietQuery Private Functions
 // ===================================================================
-var httpLoad = function (url, dietQueryInstance) {
+var _httpLoad = function (url, dietQueryInstance) {
   // Credit to Joan and Félix Gagnon-Grenier on StackOverflow at question answer:
   // https://stackoverflow.com/a/4033310
   var xmlHttp = new XMLHttpRequest()
@@ -16,7 +16,7 @@ var httpLoad = function (url, dietQueryInstance) {
 
 // dietQuery Public Functions
 // ===================================================================
-var dQ = {
+var $dq = {
   nodeList: [],
   constructor: function (selector) {
     var retVal
@@ -29,7 +29,7 @@ var dQ = {
     }
     return this
   },
-  css: function (property, value) {
+  style: function (property, value) {
     for (var i = 0; i < this.nodeList.length; i++) {
       this.nodeList[i].style[property] = value
     }
@@ -47,20 +47,20 @@ var dQ = {
     }
     return this
   },
-  attribute: function (property, value) {
+  attr: function (property, value) {
     for (var i = 0; i < this.nodeList.length; i++) {
       this.nodeList[i][property] = value
     }
     return this
   },
   load: function (url) {
-    httpLoad(url, this)
+    _httpLoad(url, this)
     return this
   }
 }
 
 // dietQuery Interface
 // ===================================================================
-function _$ (selector) { // eslint-disable-line no-unused-vars
-  return dQ.constructor(selector)
+function dq (selector) { // eslint-disable-line no-unused-vars
+  return $dq.constructor(selector)
 }
